@@ -1,0 +1,4 @@
+.editor-root{width: 98%;}
+.editor-content{padding:0.5rem;border:1px solid #c2c2c2;background: #fff;border-radius: 3px;outline: none;line-height: 30px;}
+.editor-content:hover{border: 1px solid #666666;}
+.editor-content img {width: 98%;margin: auto;}
