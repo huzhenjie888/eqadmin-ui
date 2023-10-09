@@ -1,7 +1,11 @@
 <template>
 <div class="eqadmin-editor editor-root" >
   <div ref="eqadmin-toolbar"></div>
-  <div ref="eqadminEditorContent" class="editor-content" contenteditable="true" @input="input">
+  <div 
+  ref="eqadminEditorContent"  
+  class="editor-content" 
+  contenteditable="true" 
+  @input="input">
 
   </div>
 </div>
@@ -28,6 +32,7 @@ export default {
        editorHeight:'100%',
        editorContent:null,
        content:{},
+	   range:null,
     }
   },
   methods:{
