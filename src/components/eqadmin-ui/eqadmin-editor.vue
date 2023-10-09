@@ -41,9 +41,9 @@ export default {
     },
   },
   mounted() {
-
     let that = this;
     let editorContent = this.$refs.eqadminEditorContent;
+    editorContent.focus();
     this.editorContent = editorContent;
     editorContent.style.width = this.editorWidth ;
     editorContent.style.height = this.editorHeight ;
@@ -54,10 +54,13 @@ export default {
         for (var i = 0; i < items.length; i++) {
           if(items[i].kind=='file'){
             cliboardData.dealFile(items[i].getAsFile(),editorContent);
+            //文件处理完毕后，继续聚焦
+            //that.appendBlank();
           }
         }
       }
     })
+
   }
   //
 

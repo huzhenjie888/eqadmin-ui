@@ -13,5 +13,5 @@ export default  {
 </template>
 
 <style >
-@import url("./public/thems/default.css");
+@import url("../public/thems/default.css");
 </style>
