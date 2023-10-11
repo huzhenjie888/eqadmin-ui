@@ -11,6 +11,7 @@
 </div>
 </template>
 <script>
+import indexJs from "../../js/index.js"
 import cliboardData from "../../js/clipboarddata.js"
 export default {
   name: "eqadmin-editor",
@@ -47,26 +48,8 @@ export default {
     },
   },
   mounted() {
-    let that = this;
-    let editorContent = this.$refs.eqadminEditorContent;
-    editorContent.focus();
-    this.editorContent = editorContent;
-    editorContent.style.width = this.editorWidth ;
-    editorContent.style.height = this.editorHeight ;
-    //添加粘贴板监听事件
-    editorContent.addEventListener('paste',function(e){
-      const items = (e.clipboardData || window.clipboardData).items;
-      if (items && items.length) {
-        for (var i = 0; i < items.length; i++) {
-          if(items[i].kind=='file'){
-            cliboardData.dealFile(items[i].getAsFile(),editorContent);
-            //文件处理完毕后，继续聚焦
-            //that.appendBlank();
-          }
-        }
-      }
-    })
-
+    //初始化
+    indexJs.init(this);
   }
   //
 
