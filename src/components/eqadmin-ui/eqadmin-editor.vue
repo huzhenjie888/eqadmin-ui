@@ -42,6 +42,7 @@ export default {
     input(e){
       this.content.text = e.target.innerText;
       this.content.html = e.target.innerHTML;
+      this.content.editor = this.editorContent;
       this.$emit('eqadminEditorInput',this.content);
     },
   },
